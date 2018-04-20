@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="car_obj"
+          class="Car"
+          p:chassis_number="eng2013"
+          p:color="baker's chocolate"
+          p:fuel_type="petrol"
+          p:average="12.50"
+          p:price="750070"></bean>
+
+    <bean id="cust_address"
+          class="Address"
+          p:build_no="12"
+          p:city_name="Stalowa"
+          p:pin_code="123"></bean>
+
+    <bean id="customer"
+          class="Customer"
+          p:cust_id="2013"
+          p:cust_name="It's BOB"
+          p:cust_address-ref="cust_address"></bean>
+
+</beans>
