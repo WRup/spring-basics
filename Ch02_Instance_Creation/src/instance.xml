@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="car_obj"
+          class = "Car"></bean>
+    <bean id="car_factory" class="CarFactory"></bean>
+    <bean id="car_obj_new" factory-bean="car_factory" factory-method="buildCar"></bean>
+    <bean id="carService" class="CarService" factory-method="createService"></bean>
+</beans>
