@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="obj" class="Demo_Custom_Init"
+      init-method="myInit" destroy-method="destroy"></bean>
+    <bean id = "obj_Initializing"
+          class = "Demo_InitializingBean"></bean>
+    <bean id="obj_Disposable"
+          class = "Demo_DisposableBean"></bean>
+    <bean id="obj_myBean"
+          class = "MyBean"></bean>
+    <bean id="beanPostProcessor"
+          class="Demo_BeanPostProcessor"></bean>
+</beans>
