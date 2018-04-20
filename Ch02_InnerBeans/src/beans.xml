@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="customer"
+          class="Customer">
+        <property name="cust_id"  value="20"/>
+        <property name="cust_name" value="Bob"/>
+        <property name="cust_address">
+            <bean class="Address">
+                <property name="build_no" value="2"/>
+                <property name="city_name" value="Stalowa"/>
+                <property name="pin_code" value="123"/>
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="customer_const"
+          class="Customer">
+        <constructor-arg value="20"/>
+        <constructor-arg value="Bob"/>
+        <constructor-arg>
+            <bean class="Address">
+                <property name="build_no" value="2"/>
+                <property name="city_name" value="Stalowka"/>
+                <property name="pin_code" value="123"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+</beans>
